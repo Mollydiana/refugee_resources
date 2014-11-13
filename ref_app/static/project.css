@@ -1,0 +1,71 @@
+/*#language {*/
+    /*background: url("img/1366828675882.jpg") no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+  /*height: 80px;*/
+/*}*/
+
+/*#help {*/
+    /*background: url("img/1366828675882.jpg") no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+  /*height: 110px;*/
+/*}*/
+
+/*#housing {*/
+    /*background: url("img/1366828675882.jpg") no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+  /*height: 110px;*/
+/*}*/
+
+/*#health {*/
+    /*background: url("img/1366828675882.jpg") no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+  /*height: 110px;*/
+/*}*/
+
+#language {
+    background: url("img/conversation.jpg") no-repeat left;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 110px;
+}
+
+#help {
+    background: url("img/communityService.gif") no-repeat right;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 110px;
+}
+
+#housing {
+    background: url("img/housing%20img/front-sketch.jpg") no-repeat left;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 110px;
+}
+
+#health {
+    background: url("img/health/images.jpeg") no-repeat right;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 110px;
+}

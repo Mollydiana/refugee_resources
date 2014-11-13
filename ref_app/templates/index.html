@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Refugee Resources</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="{% static 'ratchet-v2.0.2/css/ratchet.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'project.css' %}" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="{% static 'ratchet-v2.0.2/js/ratchet.js' %}"></script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">Refugee Resources</h1>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+      <p class="content-padded"></p>
+        <div class="container">
+{#            <img border="0" src="{% static 'img/24-hour-geostationary-satellite-animation-loop-Earth.gif' %}" width="475" height="479">#}
+          <button id="language" class="btn btn-block btn-outlined"><p style="margin-left: 40%">Language</p></button>
+          <button id="health" class="btn btn-block btn-outlined"><p style="margin-right: 40%">Health</p></button>
+          <button id="housing" class="btn btn-block btn-outlined"><p style="margin-left: 40%">Housing</p></button>
+          <button id="help" class="btn btn-block btn-outlined"><p style="margin-right: 40%">Help</p></button>
+        </div>
+    </div>
+
+  </body>
+</html>
