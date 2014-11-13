@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Refugee Resources</title>
 
@@ -12,33 +12,77 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="{% static 'ratchet-v2.0.2/css/ratchet.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css' %}"/>
+
+    <script src="{% static 'angular/angular.min.js' %}">
+    </script>
+    <script src={% static 'angular/angular-route.min.js' %}>
+    </script>
+    <script src="{% static 'js/vendors/mobile-angular-ui/dist/js/mobile-angular-ui.min.js' %}">
+    </script>
+
+    <!-- Defines index page's controller -->
+    <script src="{% static "js/controllers/homeController.js" %}"></script>
+    <script src="{% static "js/controllers/healthController.js" %}"></script>
+    <script src="{% static "js/controllers/housingController.js" %}"></script>
+    <script src="{% static "js/controllers/helpController.js" %}"></script>
 
     <!-- Custom CSS -->
     <link href="{% static 'project.css' %}" rel="stylesheet">
 
-    <!-- Include the compiled Ratchet JS -->
-    <script src="{% static 'ratchet-v2.0.2/js/ratchet.js' %}"></script>
-  </head>
-  <body>
+</head>
+<body>
+<!-- Sidebars -->
 
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav">
-      <h1 class="title">Refugee Resources</h1>
-    </header>
+<div class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar">
+  <h1 class="app-name">Refugee Resources</h1>
 
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
-      <p class="content-padded"></p>
-        <div class="container">
-{#            <img border="0" src="{% static 'img/24-hour-geostationary-satellite-animation-loop-Earth.gif' %}" width="475" height="479">#}
-          <button id="language" class="btn btn-block btn-outlined"><p style="margin-left: 40%">Language</p></button>
-          <button id="health" class="btn btn-block btn-outlined"><p style="margin-right: 40%">Health</p></button>
-          <button id="housing" class="btn btn-block btn-outlined"><p style="margin-left: 40%">Housing</p></button>
-          <button id="help" class="btn btn-block btn-outlined"><p style="margin-right: 40%">Help</p></button>
-        </div>
+  <div class="scrollable">
+    <div class="scrollable-content">
+      <div class="list-group" toggle="off" bubble target="mainSidebar">
+        <a class="list-group-item" href="#/">Home <i class="fa fa-chevron-right pull-right"></i></a>
+        <!-- ... -->
+      </div>
+
     </div>
+  </div>
+</div>
 
-  </body>
+<div class="app">
+
+  <!-- Navbars -->
+  <div class="navbar navbar-app navbar-absolute-top">
+
+      <div class="navbar-brand navbar-brand-center" yield-to="title">
+        <span>Refugee Resources</span>
+      </div>
+
+      <div class="btn-group pull-left">
+        <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
+          <i class="fa fa-bars"></i> Menu
+        </div>
+      </div>
+
+      <div class="btn-group pull-right" yield-to="navbarAction">
+        <div class="btn btn-navbar">
+          <i class="fa fa-plus"></i> New
+        </div>
+      </div>
+  </div>
+
+  <div class="navbar navbar-app navbar-absolute-bottom">
+    <div class="btn-group justified">
+      <a href="#/route1" class="btn btn-navbar btn-icon-only"><i class="fa fa-home fa-navbar"></i></a>
+      <a href="#/route2" class="btn btn-navbar btn-icon-only"><i class="fa fa-list fa-navbar"></i></a>
+    </div>
+  </div>
+
+  <div class="app-body">
+      <ng-view class="app-content"></ng-view>
+  </div>
+</div>
+
+</body>
 </html>
