@@ -1,5 +1,10 @@
 body{
-
+ background: url("img/base/hands-nourished-community.jpg")no-repeat center;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height: 100%;
 }
 #language {
     background: url("img/conversation.jpg") no-repeat center;
@@ -7,7 +12,36 @@ body{
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  height: 210px;
+  height: 220px;
+
+}
+#languageBtn {
+    border: 0 inset #255;
+    height: 220px;
+    background: rgba(255,255,255,0.5);
+
+}
+#healthBtn {
+    border: 0 inset #255;
+    height: 220px;
+    background: rgba(255,255,255,0.5);
+}
+#housingBtn {
+    border: 0 inset #255;
+    height: 220px;
+    background: rgba(255,255,255,0.5);
+}
+#helpBtn {
+    border: 0 inset #255;
+    height: 220px;
+    background: rgba(255,255,255,0.5);
+}
+.btnText{
+    color: #1f3451;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 #help {
@@ -35,6 +69,7 @@ body{
   -o-background-size: contain;
   background-size: contain;
   height: 210px;
+
 }
 
 .panel-title {
@@ -45,10 +80,31 @@ body{
     width: 43%;
     /*height: 220px;*/
     margin-left: 4%;
-    margin-top: 4%;
-    /*margin-right: 4%;*/
+    margin-top: 6%;
 }
-.bottomRow {
-        margin-bottom: 4%;
+
+
+i {
+    color: #f5f5f5;
+}
+
+p {
+    color: #f5f5f5;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    border: 1px solid #000000;
+    background: -webkit-gradient(linear, 70% 2%, 70% 100%, color-stop(0%, #1f3451), color-stop(90%, #18283f));
+	background: -webkit-linear-gradient(bottom, #1f3451,#18283f);
+	background: -moz-linear-gradient(bottom, #1f3451,#18283f);
+	background: -o-linear-gradient(bottom, #1f3451,#18283f);
+	background: -ms-linear-gradient(bottom, #1f3451,#18283f);
+	background: linear-gradient(bottom, #1f3451,#18283f);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px darkslategray;
 
 }
