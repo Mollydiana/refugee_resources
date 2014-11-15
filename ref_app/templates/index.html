@@ -18,15 +18,17 @@
     <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css' %}"/>
-{#    <link rel="stylesheet" href="//rawgithub.com/mgcrea/angular-motion/master/dist/angular-motion.min.css">#}
-    <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/default.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/component.css' %}" />
+    {#    <link rel="stylesheet" href="//rawgithub.com/mgcrea/angular-motion/master/dist/angular-motion.min.css">#}
+    <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/default.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/component.css' %}"/>
 
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Concert+One|Josefin+Sans|Raleway|Coming+Soon' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Concert+One|Josefin+Sans|Raleway|Coming+Soon'
+          rel='stylesheet' type='text/css'>
 
     <script src="{% static 'angular/angular.js' %}"></script>
     <script src="{% static 'angular/angular-route.js' %}"></script>
     <script src="{% static 'js/vendors/mobile-angular-ui/dist/js/mobile-angular-ui.js' %}"></script>
+    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
 
 
     <!-- JavaScript -->
@@ -34,10 +36,10 @@
 
     <!-- Defines index page's controller -->
     <script src="{% static "js/controllers/homeController.js" %}"></script>
-        <script src="{% static "js/controllers/languageController.js" %}"></script>
-        <script src="{% static "js/controllers/healthController.js" %}"></script>
-{#        <script src="{% static "js/controllers/housingController.js" %}"></script>#}
-    {#    <script src="{% static "js/controllers/helpController.js" %}"></script>#}
+    <script src="{% static "js/controllers/languageController.js" %}"></script>
+    <script src="{% static "js/controllers/healthController.js" %}"></script>
+    {#        <script src="{% static "js/controllers/housingController.js" %}"></script>#}
+        <script src="{% static "js/controllers/helpController.js" %}"></script>
 
     <!-- Custom CSS -->
     <link href="{% static 'project.css' %}" rel="stylesheet">
@@ -47,7 +49,8 @@
 <div ng-app="myApp">
     <div ng-controller="homeController">
         <!-- Sidebars -->
-        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar" ng-if="switches.sidebar">
+        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar"
+             ng-if="switches.sidebar">
             <h1 class="app-name">refApp</h1>
 
             <div class="scrollable">
@@ -87,16 +90,36 @@
         </div>
     </div>
 </div>
-        <script src="{% static 'ModalWindowEffects/js/modernizr.custom.js'%}"></script>
-		<script src="{% static 'ModalWindowEffects/js/classie.js' %}"></script>
-		<script src="{% static 'ModalWindowEffects/js/modalEffects.js' %}"></script>
-		<script>
-			var polyfilter_scriptpath = '/js/';
-		</script>
-		<script src="{% static 'ModalWindowEffects/js/cssParser.js' %}"></script>
-		<script src="{% static 'ModalWindowEffects/js/css-filters-polyfill.js' %}"></script>
-        <script type="text/javascript">
+<script src="{% static 'ModalWindowEffects/js/modernizr.custom.js' %}"></script>
+<script src="{% static 'ModalWindowEffects/js/classie.js' %}"></script>
+<script src="{% static 'ModalWindowEffects/js/modalEffects.js' %}"></script>
+<script>
+    var polyfilter_scriptpath = '/js/';
+</script>
+<script>
+  var myDataRef = new Firebase('https://t871ehlkwy2.firebaseio-demo.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+</script>
+<script src="{% static 'ModalWindowEffects/js/cssParser.js' %}"></script>
+<script src="{% static 'ModalWindowEffects/js/css-filters-polyfill.js' %}"></script>
+<script type="text/javascript">
 
-        </script>
+</script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 function homeController($scope) {
-
+   window.ModalEffects();
 //    $scope.switches = {
 //        sidebar: false,
 //        language: false,

@@ -39,7 +39,7 @@ body{
 .btnText{
     color: #1f3451;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 23px;
     font-family: 'Josefin Sans', sans-serif;
 
 }
@@ -183,7 +183,7 @@ i {
     width: 50%;
     max-width: 630px;
     min-width: 320px;
-    height: auto;
+    height: 74%;
     z-index: 2000;
     visibility: hidden;
     backface-visibility: hidden;
