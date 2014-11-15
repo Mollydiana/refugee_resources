@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'js/vendors/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css' %}"/>
+{#    <link rel="stylesheet" href="//rawgithub.com/mgcrea/angular-motion/master/dist/angular-motion.min.css">#}
+    <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/default.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/component.css' %}" />
 
     <link href='http://fonts.googleapis.com/css?family=Poiret+One|Concert+One|Josefin+Sans|Raleway|Coming+Soon' rel='stylesheet' type='text/css'>
 
@@ -25,13 +28,15 @@
     <script src="{% static 'angular/angular-route.js' %}"></script>
     <script src="{% static 'js/vendors/mobile-angular-ui/dist/js/mobile-angular-ui.js' %}"></script>
 
+
     <!-- JavaScript -->
     <script src="{% static "js/myApp.js" %}"></script>
 
     <!-- Defines index page's controller -->
     <script src="{% static "js/controllers/homeController.js" %}"></script>
-    {#    <script src="{% static "js/controllers/healthController.js" %}"></script>#}
-    {#    <script src="{% static "js/controllers/housingController.js" %}"></script>#}
+        <script src="{% static "js/controllers/languageController.js" %}"></script>
+        <script src="{% static "js/controllers/healthController.js" %}"></script>
+{#        <script src="{% static "js/controllers/housingController.js" %}"></script>#}
     {#    <script src="{% static "js/controllers/helpController.js" %}"></script>#}
 
     <!-- Custom CSS -->
@@ -42,8 +47,8 @@
 <div ng-app="myApp">
     <div ng-controller="homeController">
         <!-- Sidebars -->
-        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar" ng-if="switches.sidebar"><h1
-                class="app-name"> Refugee Resources</h1>
+        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar" ng-if="switches.sidebar">
+            <h1 class="app-name">refApp</h1>
 
             <div class="scrollable">
                 <div class="scrollable-content">
@@ -61,7 +66,7 @@
         <div class="navbar navbar-app navbar-absolute-top">
 
             <div class="navbar-brand navbar-brand-center" yield-to="title">
-                <p>Refugee Resources</p>
+                <p id="title">Refugee Resources</p>
             </div>
 
             <div class="btn-group pull-left">
@@ -69,12 +74,6 @@
                     <i class="fa fa-bars"></i>
                 </div>
             </div>
-
-{#            <div class="btn-group pull-right" yield-to="navbarAction">#}
-{#                <div class="btn btn-navbar">#}
-{#                    <i class="fa fa-plus"></i> New#}
-{#                </div>#}
-{#            </div>#}
         </div>
         <div class="navbar navbar-app navbar-absolute-bottom">
             <div class="btn-group justified">
@@ -88,6 +87,16 @@
         </div>
     </div>
 </div>
-{#</div>#}
+        <script src="{% static 'ModalWindowEffects/js/modernizr.custom.js'%}"></script>
+		<script src="{% static 'ModalWindowEffects/js/classie.js' %}"></script>
+		<script src="{% static 'ModalWindowEffects/js/modalEffects.js' %}"></script>
+		<script>
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="{% static 'ModalWindowEffects/js/cssParser.js' %}"></script>
+		<script src="{% static 'ModalWindowEffects/js/css-filters-polyfill.js' %}"></script>
+        <script type="text/javascript">
+
+        </script>
 </body>
 </html>
