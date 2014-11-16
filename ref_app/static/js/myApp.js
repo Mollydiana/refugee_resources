@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ngRoute", "mobile-angular-ui"]);
+var app = angular.module('myApp', ["ngRoute", "firebase", "mobile-angular-ui"]);
 
     app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.

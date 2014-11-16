@@ -29,6 +29,10 @@
     <script src="{% static 'angular/angular-route.js' %}"></script>
     <script src="{% static 'js/vendors/mobile-angular-ui/dist/js/mobile-angular-ui.js' %}"></script>
     <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
+    <script src="https://cdn.rawgit.com/Luegg/angularjs-scroll-glue/v2.0.2/src/scrollglue.js"></script>
+
+
 
 
     <!-- JavaScript -->
@@ -47,25 +51,24 @@
 </head>
 <body>
 <div ng-app="myApp">
-    <div ng-controller="homeController">
-        <!-- Sidebars -->
-        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar"
-             ng-if="switches.sidebar">
-            <h1 class="app-name">refApp</h1>
-
-            <div class="scrollable">
-                <div class="scrollable-content">
-                    <div class="list-group" toggle="off" bubble target="mainSidebar">
-                        <a class="list-group-item" href="#/">Home <i class="fa fa-chevron-right pull-right"></i></a>
-                        <a class="list-group-item" href="#/">Health <i class="fa fa-chevron-right pull-right"></i></a>
-                        <a class="list-group-item" href="#/">Language <i class="fa fa-chevron-right pull-right"></i></a>
-                        <a class="list-group-item" href="#/">Help <i class="fa fa-chevron-right pull-right"></i></a>
-                        <!-- ... -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbars -->
+{#        <!-- Sidebars -->#}
+{#        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar"#}
+{#             ng-if="switches.sidebar">#}
+{#            <h1 class="app-name">refApp</h1>#}
+{##}
+{#            <div class="scrollable">#}
+{#                <div class="scrollable-content">#}
+{#                    <div class="list-group" toggle="off" bubble target="mainSidebar">#}
+{#                        <a class="list-group-item" href="#/">Home <i class="fa fa-chevron-right pull-right"></i></a>#}
+{#                        <a class="list-group-item" href="#/">Health <i class="fa fa-chevron-right pull-right"></i></a>#}
+{#                        <a class="list-group-item" href="#/">Language <i class="fa fa-chevron-right pull-right"></i></a>#}
+{#                        <a class="list-group-item" href="#/">Help <i class="fa fa-chevron-right pull-right"></i></a>#}
+{#                        <!-- ... -->#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- Navbars -->#}
         <div class="navbar navbar-app navbar-absolute-top">
 
             <div class="navbar-brand navbar-brand-center" yield-to="title">
@@ -95,25 +98,6 @@
 <script src="{% static 'ModalWindowEffects/js/modalEffects.js' %}"></script>
 <script>
     var polyfilter_scriptpath = '/js/';
-</script>
-<script>
-  var myDataRef = new Firebase('https://t871ehlkwy2.firebaseio-demo.com/');
-      $('#messageInput').keypress(function (e) {
-        if (e.keyCode == 13) {
-          var name = $('#nameInput').val();
-          var text = $('#messageInput').val();
-          myDataRef.push({name: name, text: text});
-          $('#messageInput').val('');
-        }
-      });
-      myDataRef.on('child_added', function(snapshot) {
-        var message = snapshot.val();
-        displayChatMessage(message.name, message.text);
-      });
-      function displayChatMessage(name, text) {
-        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-      };
 </script>
 <script src="{% static 'ModalWindowEffects/js/cssParser.js' %}"></script>
 <script src="{% static 'ModalWindowEffects/js/css-filters-polyfill.js' %}"></script>

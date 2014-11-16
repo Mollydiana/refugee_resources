@@ -1,32 +1,40 @@
 <div style="width: 100%" class="container">
-<div class="md-modal md-effect-1" id="modal-1">
+    <div class="md-modal md-effect-1" id="modal-1">
+        <div class="md-content">
+        </div>
+    </div>
+    .
+
+    <div class="md-overlay"></div>
+</div>
+<div class="md-modal md-effect-12" id="modal-12">
     <div class="md-content">
+        <h3>Learn English</h3>
+
+        <div>
+
+            <div class="row"><img src="http://www.ccsf.edu/content/dam/ccsf/ccsf-logo.png"/><div class="col-xs-offset-2">Call <strong>(415) 239-3003</strong> to sign up for an ESL class near you!</div></div><br>
+
+                <a href="http://www.learn-english-online.org/Lesson1/Lesson1.htm"><button class="btn btn-info">Practice English here!</button></a>
+               <!-- <iframe width="300" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=hospitals%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCetaFCe77sIF6Drh_o79nmc60-24ni45Y"></iframe> -->
+            <ul>
+                <iframe width="190" height="140"
+                        src="//www.youtube.com/embed/zewJ3X_ASF0?list=PLE4LvpwkzPPk-oyClNFRiJXuKUIgnEvSD"
+                        frameborder="0" allowfullscreen></iframe>
+
+            </ul>
+            <button class="md-close">Close me!</button>
+        </div>
     </div>
 </div>
-.
 
-<div class="md-overlay"></div>
-</div>
-		<div class="md-modal md-effect-12" id="modal-12">
-			<div class="md-content">
-				<h3>Learn English</h3>
-				<div>
-					<p>This is a modal window. You can do the following things with it:</p>
-					<ul>
-						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-						<li><strong>Close:</strong> click on the button below to close the modal.</li><li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-					</ul>
-					<button class="md-close">Close me!</button>
-				</div>
-			</div>
-		</div>
-
-<button id="languageBtn" ng-mouseenter="toggle('language')" ng-mouseleave="toggle('language')" class="btn btn-default md-trigger" data-modal="modal-12">
+<button id="languageBtn" ng-mouseenter="toggle('language')" ng-mouseleave="toggle('language')"
+        class="btn btn-default md-trigger" data-modal="modal-12">
     <div class="panel-heading" toggle target="collapseOne">
         <h4 class="panel-title">
             <p id="abc">ABC</p>
             <img ng-src="http://cdn.flaticon.com/png/256/27759.png"/>
+
             <p class="btnText">Language</p>
         </h4>
     </div>
@@ -36,26 +44,31 @@
     <div class="panel-heading" toggle target="collapseTwo">
         <h4 class="panel-title">
             <img ng-src="https://cdn3.iconfinder.com/data/icons/medcare/512/Stethoscope-512.png"/>
+
             <p class="btnText">Health</p>
         </h4>
     </div>
 </button>
-<a href="http://sfbay.craigslist.org/search/sfc/hhh"><button id="housingBtn" ng-mouseenter="toggle('housing')" ng-mouseleave="toggle('housing')" class="btn btn-default">
-    <div class="panel-heading" toggle target="collapseThree">
-        <img ng-src="https://cdn3.iconfinder.com/data/icons/buildings-places/512/Housing-512.png"/>
-        <h4 class="panel-title">
-            <p class="btnText">Housing</p>
-        </h4>
-    </div>
-</button></a>
-<a href="#/help/"><button id="helpBtn" ng-mouseenter="toggle('help')" ng-mouseleave="toggle('help')" class="btn btn-default">
-    <div class="panel-heading" toggle target="collapseThree">
+<a href="http://sfbay.craigslist.org/search/sfc/hhh">
+    <button id="housingBtn" ng-mouseenter="toggle('housing')" ng-mouseleave="toggle('housing')" class="btn btn-default">
+        <div class="panel-heading" toggle target="collapseThree">
+            <img ng-src="https://cdn3.iconfinder.com/data/icons/buildings-places/512/Housing-512.png"/>
+            <h4 class="panel-title">
+                <p class="btnText">Housing</p>
+            </h4>
+        </div>
+    </button>
+</a>
+<a href="#/help/">
+    <button id="helpBtn" ng-mouseenter="toggle('help')" ng-mouseleave="toggle('help')" class="btn btn-default">
+        <div class="panel-heading" toggle target="collapseThree">
             <img ng-src="http://upload.wikimedia.org/wikipedia/commons/6/60/Simple_Globe.svg"/>
-        <h4 class="panel-title">
-            <p class="btnText">Help</p>
-        </h4>
-    </div>
-</button></a>
+            <h4 class="panel-title">
+                <p class="btnText">Help</p>
+            </h4>
+        </div>
+    </button>
+</a>
 <a href="language.html">
     <div ng-if="switches['language']" id="language"></div>
 </a>
