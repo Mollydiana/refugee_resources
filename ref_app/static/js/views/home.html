@@ -1,9 +1,11 @@
+<!-- Language Modal -->
 <div style="width: 100%" class="container">
     <div class="md-modal md-effect-1" id="modal-1">
         <div class="md-content">
         </div>
     </div>
-    .
+    <p style="font-size: 1px">.</p>
+    <p style="font-size: 1px">.</p>
 
     <div class="md-overlay"></div>
 </div>
@@ -12,18 +14,51 @@
         <h3>Learn English</h3>
 
         <div>
+         <a href="http://www.learn-english-online.org/Lesson1/Lesson1.htm"> <button class="btn btn-special"> Online English practice</button></a> <hr>
+            <div class="row"><img src="http://www.ccsf.edu/content/dam/ccsf/ccsf-logo.png"/><div class="col-xs-offset-2">Call <strong>(415) 239-3003</strong> to sign up for an ESL class near you!</div></div><hr>
 
-            <div class="row"><img src="http://www.ccsf.edu/content/dam/ccsf/ccsf-logo.png"/><div class="col-xs-offset-2">Call <strong>(415) 239-3003</strong> to sign up for an ESL class near you!</div></div><br>
 
-                <a href="http://www.learn-english-online.org/Lesson1/Lesson1.htm"><button class="btn btn-info">Practice English here!</button></a>
                <!-- <iframe width="300" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=hospitals%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCetaFCe77sIF6Drh_o79nmc60-24ni45Y"></iframe> -->
-            <ul>
-                <iframe width="190" height="140"
+               <strong style="margin-left: 5%">Here is a video to get you started!</strong><br><br><iframe style="margin-left: 10%" width="190" height="113"
                         src="//www.youtube.com/embed/zewJ3X_ASF0?list=PLE4LvpwkzPPk-oyClNFRiJXuKUIgnEvSD"
                         frameborder="0" allowfullscreen></iframe>
 
-            </ul>
-            <button class="md-close">Close me!</button>
+            <br><br><button class="md-close">Close me!</button>
+        </div>
+    </div>
+</div>
+
+<!-- Housing Modal -->
+
+<div class="md-modal md-effect-1" id="modal-8">
+    <div class="md-content">
+        <h3>Housing</h3>
+        <div>
+          <a href="http://sfbay.craigslist.org/search/sfc/hhh">Find housing</a>
+            <br><br><button class="md-close">Close me!</button>
+        </div>
+    </div>
+</div>
+
+<!-- Health Modal -->
+
+<div class="md-modal md-effect-1" id="modal-9">
+    <div class="md-content">
+        <h3>Health</h3>
+        <div>
+            <br><br><button class="md-close">Close me!</button>
+        </div>
+    </div>
+</div>
+
+<!-- Connect Modal -->
+
+<div class="md-modal md-effect-12" id="modal-3">
+    <div class="md-content">
+        <h3>Connect</h3>
+        <div>
+            <a href="#/help/">Chat!</a>
+            <br><br><button class="md-close">Close me!</button>
         </div>
     </div>
 </div>
@@ -32,43 +67,46 @@
         class="btn btn-default md-trigger" data-modal="modal-12">
     <div class="panel-heading" toggle target="collapseOne">
         <h4 class="panel-title">
+            <p style="margin-left: -16px; font-size: 23px" class="btnText"><span style="text-transform: capitalize">L</span>earn <span style="text-transform: capitalize">E</span>nglish</p>
             <p id="abc">ABC</p>
-            <img ng-src="http://cdn.flaticon.com/png/256/27759.png"/>
+            <img style="height: 120px;" ng-src="http://cdn.flaticon.com/png/256/27759.png"/>
 
-            <p class="btnText">Language</p>
+
         </h4>
     </div>
 </button>
 
-<button id="healthBtn" ng-mouseenter="toggle('health')" ng-mouseleave="toggle('health')" class="btn btn-default">
+<button id="healthBtn" ng-mouseenter="toggle('health')" ng-mouseleave="toggle('health')" class="btn btn-default md-trigger" data-modal="modal-9">
     <div class="panel-heading" toggle target="collapseTwo">
         <h4 class="panel-title">
-            <img ng-src="https://cdn3.iconfinder.com/data/icons/medcare/512/Stethoscope-512.png"/>
+            <p class="btnText"><span style="text-transform: capitalize">H</span>ealth</p>
+            <img style="height: 120px;" ng-src="https://cdn3.iconfinder.com/data/icons/medcare/512/Stethoscope-512.png"/>
 
-            <p class="btnText">Health</p>
+
         </h4>
     </div>
 </button>
-<a href="http://sfbay.craigslist.org/search/sfc/hhh">
-    <button id="housingBtn" ng-mouseenter="toggle('housing')" ng-mouseleave="toggle('housing')" class="btn btn-default">
+
+    <button id="housingBtn" ng-mouseenter="toggle('housing')" ng-mouseleave="toggle('housing')" class="btn btn-default md-trigger" data-modal="modal-8">
         <div class="panel-heading" toggle target="collapseThree">
-            <img ng-src="https://cdn3.iconfinder.com/data/icons/buildings-places/512/Housing-512.png"/>
+             <p class="btnText"><span style="text-transform: capitalize">H</span>ousing</p>
+            <img style="height: 120px;" ng-src="https://cdn3.iconfinder.com/data/icons/buildings-places/512/Housing-512.png"/>
             <h4 class="panel-title">
-                <p class="btnText">Housing</p>
+
             </h4>
         </div>
     </button>
-</a>
-<a href="#/help/">
-    <button id="helpBtn" ng-mouseenter="toggle('help')" ng-mouseleave="toggle('help')" class="btn btn-default">
+
+
+    <button id="helpBtn" ng-mouseenter="toggle('help')" ng-mouseleave="toggle('help')" class="btn btn-default md-trigger" data-modal="modal-3">
         <div class="panel-heading" toggle target="collapseThree">
-            <img ng-src="http://upload.wikimedia.org/wikipedia/commons/6/60/Simple_Globe.svg"/>
+            <p class="btnText"><span style="text-transform: capitalize">C</span>onnect</p>
+            <img style="height: 120px;" ng-src="http://upload.wikimedia.org/wikipedia/commons/6/60/Simple_Globe.svg"/>
             <h4 class="panel-title">
-                <p class="btnText">Help</p>
+
             </h4>
         </div>
     </button>
-</a>
 <a href="language.html">
     <div ng-if="switches['language']" id="language"></div>
 </a>
