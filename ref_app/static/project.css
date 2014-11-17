@@ -409,6 +409,8 @@ i {
 .btn-special {
     background-color: #1f3451;
     text-decoration: none;
+    color: #ffffff;
+    height: 50px;
 }
 
 .btn-special:hover, .btn-special:visited, .btn-special:link, .btn-special:active {
