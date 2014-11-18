@@ -418,3 +418,33 @@ i {
     font-weight: bold;
     color: white;
 }
+
+.btn{
+    font-size: 19px;
+}
+
+#healthDiv {
+   padding:  15px 90px 30px;
+}
+
+#findDoc {
+    border-radius: 5px;
+    border: 1px solid darkred;
+    background: #1f3451;
+    padding: 5px;
+}
+#legalRights {
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+#Chat {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+font-family: 'Francois One', sans-serif;
+}
+#click {
+    font-size: 20px;
+    letter-spacing: 1px;
+}

@@ -22,16 +22,16 @@
     <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/default.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'ModalWindowEffects/css/component.css' %}"/>
 
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Concert+One|Josefin+Sans|Raleway|Coming+Soon|Permanent+Marker|Oleo+Script+Swash+Caps|Oleo+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Concert+One|Josefin+Sans|Francois+One|Raleway|Coming+Soon|Permanent+Marker|Oleo+Script+Swash+Caps|Oleo+Script'
+          rel='stylesheet' type='text/css'>
 
     <script src="{% static 'angular/angular.js' %}"></script>
     <script src="{% static 'angular/angular-route.js' %}"></script>
     <script src="{% static 'js/vendors/mobile-angular-ui/dist/js/mobile-angular-ui.js' %}"></script>
+    <script src="{% static 'js/angular-translate.min.js' %}"></script>
+    <script src="{% static 'js/angular-translate-loader-url.min.js' %}"></script>
     <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
     <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
-    <script src="https://cdn.rawgit.com/Luegg/angularjs-scroll-glue/v2.0.2/src/scrollglue.js"></script>
-
-
 
 
     <!-- JavaScript -->
@@ -42,7 +42,7 @@
     <script src="{% static "js/controllers/languageController.js" %}"></script>
     <script src="{% static "js/controllers/healthController.js" %}"></script>
     {#        <script src="{% static "js/controllers/housingController.js" %}"></script>#}
-        <script src="{% static "js/controllers/helpController.js" %}"></script>
+    <script src="{% static "js/controllers/helpController.js" %}"></script>
 
     <!-- Custom CSS -->
     <link href="{% static 'project.css' %}" rel="stylesheet">
@@ -50,47 +50,31 @@
 </head>
 <body>
 <div ng-app="myApp">
-{#        <!-- Sidebars -->#}
-{#        <div style="z-index: 1;" class="sidebar sidebar-left" parent-active-class="sidebar-left-in" id="mainSidebar"#}
-{#             ng-if="switches.sidebar">#}
-{#            <h1 class="app-name">refApp</h1>#}
-{##}
-{#            <div class="scrollable">#}
-{#                <div class="scrollable-content">#}
-{#                    <div class="list-group" toggle="off" bubble target="mainSidebar">#}
-{#                        <a class="list-group-item" href="#/">Home <i class="fa fa-chevron-right pull-right"></i></a>#}
-{#                        <a class="list-group-item" href="#/">Health <i class="fa fa-chevron-right pull-right"></i></a>#}
-{#                        <a class="list-group-item" href="#/">Language <i class="fa fa-chevron-right pull-right"></i></a>#}
-{#                        <a class="list-group-item" href="#/">Help <i class="fa fa-chevron-right pull-right"></i></a>#}
-{#                        <!-- ... -->#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <!-- Navbars -->#}
-        <div class="navbar navbar-app navbar-absolute-top">
 
-            <div class="navbar-brand navbar-brand-center" yield-to="title">
-                <p id="title">Refugee Resources</p>
-            </div>
+    <div class="navbar navbar-app navbar-absolute-top">
 
-            <div class="btn-group pull-left">
-                <div ng-click="toggle('sidebar')" class="btn btn-navbar sidebar-toggle">
-                    <i class="fa fa-bars"></i>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-app navbar-absolute-bottom">
-            <div class="btn-group justified">
-                <a href="#/route1" class="btn btn-navbar btn-icon-only"><i class="fa fa-home fa-navbar"></i></a>
-                <a href="#/route2" class="btn btn-navbar btn-icon-only"><i class="fa fa-list fa-navbar"></i></a>
-            </div>
+        <div class="navbar-brand navbar-brand-center" yield-to="title">
+            <p id="title">Refugee Resources</p>
         </div>
 
-        <div class="app-body">
-            <ng-view class="app-content"></ng-view>
+        <div class="btn-group pull-left">
+            <div ng-click="toggle('sidebar')" class="btn btn-navbar sidebar-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
     </div>
+
+<div class="navbar navbar-app navbar-absolute-bottom">
+    <div class="btn-group justified">
+        <a href="#/route1" class="btn btn-navbar btn-icon-only"><i class="fa fa-home fa-navbar"></i></a>
+        <a href="#/route2" class="btn btn-navbar btn-icon-only"><i class="glyphicon glyphicon-globe"></i></a>
+    </div>
+</div>
+
+<div class="app-body">
+    <ng-view class="app-content"></ng-view>
+</div>
+</div>
 </div>
 <script src="{% static 'ModalWindowEffects/js/modernizr.custom.js' %}"></script>
 <script src="{% static 'ModalWindowEffects/js/classie.js' %}"></script>
