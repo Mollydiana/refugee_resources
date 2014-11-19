@@ -94,7 +94,7 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'ref_app', 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 
