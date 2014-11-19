@@ -1,0 +1,1 @@
+web: gunicorn refugee_resources.wsgi --log-file -

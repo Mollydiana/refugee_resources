@@ -85,7 +85,7 @@ app.config(function ($translateProvider) {
             HOUSING: 'الإسكان',
             CONNECT: 'مساعدة',
             JOBS: 'وظائف',
-            Chat: 'بريد',
+            CHAT: 'بريد',
 
             EXIT: 'خروج',
             <!--Language Modal Text-->
