@@ -85,7 +85,7 @@ app.config(function ($translateProvider) {
             HOUSING: 'الإسكان',
             CONNECT: 'مساعدة',
             JOBS: 'وظائف',
-            CHAT: 'بريد',
+            Chat: 'بريد',
 
             EXIT: 'خروج',
             <!--Language Modal Text-->
@@ -114,7 +114,7 @@ app.config(function ($translateProvider) {
             HOUSING: 'आवास',
             CONNECT: 'मदत',
             JOBS: 'काम',
-            CHAT: 'च्याट',
+            CHAT: 'Chat',
 
             EXIT: 'निकास',
             <!--Language Modal Text-->
@@ -140,7 +140,7 @@ app.config(function ($translateProvider) {
             REFUGEE_RESOURCES: 'Refugee Resources',
 
             HEALTH: 'Caafimaadka',
-            LEARN_ENGLISH: 'English',
+            LEARN_ENGLISH: 'Baro English',
             HOUSING: 'Guryaha',
             CONNECT: 'Caawin',
             JOBS: 'Shaqo',
@@ -174,11 +174,10 @@ app.config(function ($translateProvider) {
             HOUSING: 'ծածկոց',
             CONNECT: 'միացնել',
             JOBS: 'Աշխատանք',
-            CHAT: 'զրուցել',
 
             EXIT: 'Ելք',
             <!--Language Modal Text-->
-            ONLINE_ENGLISH_PRACTICE: 'ENGLISH',
+            ONLINE_ENGLISH_PRACTICE: 'ENGLISH ՊՐԱԿՏԻԿԱՆ',
             CALL: 'կոչ',
             TO_SIGN_UP: 'գրանցվել է ESL դասի մոտ ձեզ',
             HERE_IS_A_VIDEO: 'Ահա մի տեսահոլովակ է ստանալ Դուք սկսել',

@@ -14,7 +14,7 @@ function helpController($scope, $firebase) {
         //LISTEN FOR RETURN KEY
         if (e.keyCode === 13 && $scope.msg) {
             //ALLOW CUSTOM OR ANONYMOUS USER NAMES
-            var name = $scope.name || 'anonymous';
+            var name = $scope.name || 'Anonymous';
             $scope.messages.$add({from: name, body: $scope.msg});
             //RESET MESSAGE
             $scope.msg = "";

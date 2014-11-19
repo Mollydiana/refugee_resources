@@ -46,13 +46,14 @@
     z-index: -1;
 
     display: block;
-    background: url('img/base/hands-nourished-community.jpg')no-repeat center;
+    background: url('img/base/hands-nourished-community.jpg') no-repeat center;
     background-position: 40%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
+    opacity: 0.7;
 
 }
 
@@ -364,37 +365,39 @@ i {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
+    border: 2px solid #18283f;
+        border-radius: 5px;
+
 }
 
 .example-chat {
 
     font-family: 'Raleway', sans-serif;
-    border-radius: 3px;
+    border-radius: 5px;
     -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #dfe3ea;
-    border: 1px solid #CCC;
+    background-color: #fff;;
     overflow: auto;
     padding: 0px;
     font-size: 16px;
     line-height: 22px;
     color: #666;
+    border: 2px solid #18283f;
+
 }
 
 .example-chat header {
 
-       background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
-    background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
-    background-image: -moz-linear-gradient(top, #eaeaea, #f6f6f6);
-    background-image: -ms-linear-gradient(top, #eaeaea, #f6f6f6);
-    background-image: -o-linear-gradient(top, #eaeaea, #f6f6f6);
-    background-image: linear-gradient(top, #eaeaea, #f6f6f6);
+    background-color: #18283f;
     border-radius: 3px 3px 0px 0px;
-    border-bottom: 1px solid #CCC;
-    line-height: 24px;
+    border-bottom: 1px solid #18283f;
+    line-height: 27px;
     font-size: 12px;
+    height: 30px;
     text-align: center;
+    color: #ffffff;
+    letter-spacing: 2px;
+
 }
 
 .example-chat input {
@@ -410,37 +413,44 @@ i {
     width: 100%;
     font-weight: normal;
     outline: none;
+    background-color: #FFF;
 }
 
 .example-chat .example-chat-toolbar {
     background-color: #FFF;
     padding: 10px;
     position: relative;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 2px solid #18283f;
 }
 
 .example-chat .example-chat-toolbar label {
-    text-transform: uppercase;
     line-height: 32px;
-    font-size: 14px;
+    font-size: 16px;
     color: #999;
     position: absolute;
     top: 10px;
     left: 20px;
     z-index: 1;
+
 }
 
 .example-chat .example-chat-toolbar input {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 1px solid #FFF;
-    padding-left: 100px;
+    padding-left: 105px;
     color: #999;
+    font-size: 14px;
+        border-radius: 5px;
+
+
 }
 
 .example-chat .example-chat-toolbar input:active, .example-chat .example-chat-toolbar input:focus {
     color: #999;
     border: 1px solid #FFF;
+        border-radius: 5px;
+
 }
 
 .example-chat ul {
@@ -448,6 +458,7 @@ i {
     margin: 0px;
     padding: 20px;
     overflow: auto;
+    background-color: #ffffff;
 }
 
 .example-chat ul li {
@@ -456,27 +467,36 @@ i {
 
 .example-chat ul li:last-child {
     margin: 0px;
+    background-color: #FFF;
+
 }
 
 .example-chat ul .example-chat-username {
     margin-right: 20px;
+    font-weight: bold;
+    color: red;
+    font-size: 16px;
 }
+
 
 .example-chat footer {
     display: block;
     padding: 10px;
+    border: #18283f;
+    background-color: #FFF;
+
 }
 
 .example-chat footer input {
-    border: 1px solid #ced3db;
     height: 40px;
     position: fixed;
-width: 90%;
-bottom: 60px;
+    width: 90%;
+    bottom: 60px;
     left: 20px;
     padding: 30px;
-    background-color: #efefef;
     text-align: left;
+    border: 2px solid #18283f;
+    background-color: #FFF;
 
 }
 
@@ -505,7 +525,8 @@ bottom: 60px;
     border-radius: 5px;
     border: 1px solid darkred;
     background: #1f3451;
-    padding: 5px;
+    height: 40px;
+    width: 300px;
 }
 
 #legalRights {
@@ -517,6 +538,7 @@ bottom: 60px;
     font-size: 30px;
     text-align: center;
     letter-spacing: 2px;
+    margin: 20px;
     font-family: 'Francois One', sans-serif;
 }
 
@@ -524,33 +546,39 @@ bottom: 60px;
     font-size: 20px;
     letter-spacing: 1px;
 }
+
 .styled-select select {
-   width: 90%;
-   padding: 5px;
-   font-family: 'Permanent Marker', cursive;
+    width: 80%;
+    margin-top: 10px;
+    font-family: 'josefin sans';
     font-weight: 700;
-   font-size: 23px;
-   line-height: 1;
+    font-size: 23px;
+    line-height: 4;
 
-   border-radius: 90px;
-   height: 50px;
-    position:fixed;
-    color:  darkred;
-    border: 2px solid  #1f3451;
-   left:20px;
-   bottom:70px;
 
-   }
+    border-radius: 90px;
+    height: 50px;
+    position: fixed;
+    color: #1f3451;
+    border: 1px solid #1f3451;
+    left: 35px;
+    top: 90px;
+    box-shadow: inset 2px 2px 3px 0  #1f3451;
+
+}
 
 #welcome {
     font-family: 'Permanent Marker', cursive;
     padding: 20px;
     float: right;
     text-shadow: 2px 2px #18283f;
-}#nepali{
+}
+
+#nepali {
     font-family: 'Permanent Marker', cursive;
     text-shadow: 2px 2px #18283f;
 }
+
 #arabic {
     font-family: 'Permanent Marker', cursive;
     text-shadow: 2px 2px #18283f;
@@ -559,28 +587,44 @@ bottom: 60px;
     margin-top: -45px;
     margin-bottom: 20px;
 }
+
 #chinese {
     font-family: 'Permanent Marker', cursive;
     text-shadow: 2px 2px #18283f;
     padding: 20px;
 }
+
 #french {
     font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 2px 2px #18283f;
     padding: 10px;
 }
+
 #spanish {
     font-family: 'Oleo Script Swash Caps', cursive;
     margin-top: 80px;
     text-shadow: 2px 2px #18283f;
     text-align: center;
 }
+
 #armenian {
     font-family: 'Permanent Marker', cursive;
     text-shadow: 2px 2px #18283f;
     margin-left: 46px;
-     padding: 30px;
+    padding: 30px;
 }
+
 #welcomes {
-    margin-top: 35px;
+    margin-top: 95px;
+}
+
+#chatBox {
+    margin-top: -9px;
+    position: absolute;
+}
+#linkToNumbers{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
 }

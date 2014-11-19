@@ -2,20 +2,41 @@ function languageController($scope, $translate, $location, $log) {
     $scope.appLang = null;
 
     $scope.languages = [
-        {name: 'en'},
-        {name: 'sp'},
-        {name: 'ar'},
-        {name: 'so'},
-        {name: 'hy'},
-        {name: 'ne'},
-        {name: 'fr'}
+        {
+            language: 'English',
+            shortKey: 'en'
+        },
+        {
+            language: 'Spanish',
+            shortKey: 'sp'
+        },
+        {
+            language: 'Arabic',
+            shortKey: 'ar'
+        },
+        {
+            language: 'Somali',
+            shortKey: 'so'
+        },
+        {
+            language: 'Armenian',
+            shortKey: 'hy'
+        },
+        {
+            language: 'Nepali',
+            shortKey: 'ne'
+        },
+        {
+            language: 'French',
+            shortKey: 'fr'
+        }
 
     ];
 
 
     $scope.newLanguage = function () {
         console.log($scope.appLang);
-        $translate.use($scope.appLang.name);
+        $translate.use($scope.appLang.shortKey);
         $location.path('/');
     };
 
