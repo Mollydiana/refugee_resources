@@ -3,7 +3,8 @@ function helpController($scope, $firebase) {
     $scope.messages = $firebase(ref).$asArray();
     $scope.username = "guest" + Math.floor(Math.random() * 101);
 
-    function updateScroll(){
+    function updateScroll() {
+         $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#example-message'));
         $('#example-message').scrollTop($('#example-message')[0].scrollHeight());
     }
 
@@ -13,12 +14,17 @@ function helpController($scope, $firebase) {
         //LISTEN FOR RETURN KEY
         if (e.keyCode === 13 && $scope.msg) {
             //ALLOW CUSTOM OR ANONYMOUS USER NAMES
-            var name = $scope.name || $scope.username;
+            var name = $scope.name || 'anonymous';
             $scope.messages.$add({from: name, body: $scope.msg});
             //RESET MESSAGE
             $scope.msg = "";
             updateScroll();
         }
-    }
+    };
+    ref.on('child_added', function (snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+    });
+
 
 }

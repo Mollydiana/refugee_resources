@@ -1,20 +1,41 @@
-<div style="width: 100%" class="container">
-<div class="md-modal md-effect-1" id="modal-1">
-    <div class="md-content">
-{#        <h3>Modal Dialog</h3>#}
-{#        <div>#}
-{#            <p>This is a modal window. You can do the following things with it:</p>#}
-{#            <ul>#}
-{#                <li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what it says.</li>#}
-{#                <li><strong>Look:</strong> modal windows enjoy a certain kind of attention; just look at it and appreciate its presence.</li>#}
-{#                <li><strong>Close:</strong> click on the button below to close the modal.</li>#}
-{#            </ul>#}
-{#            <button class="md-close">Close me!</button>#}
-{#        </div>#}
+<div class="contentLang">
+    <div style="margin-left: -400px;width: 400%" class="container">
+        <div class="md-modal md-effect-1" id="modal-1">
+            <div class="md-content">
+
+            </div>
+        </div>
+
+        <p style="font-size: 1px">.</p>
+
+        <p style="font-size: 1px">.</p>
+
+
+        <div class="md-overlay"></div>
+
     </div>
-</div>
+    <div id="welcomes">
+    <h1 id="welcome">Welcome!</h1>
 
-...
+    <h1 id="nepali">स्वागत छ!</h1>
 
-<div class="md-overlay"></div>
+    <h1 id="armenian">Բարի գալուստ!</h1>
+
+
+    <h1 id="french">Bienvenue!</h1>
+
+    <h1 id="arabic">مترحيب</h1>
+
+    <h1 id="spanish">¡Bienvenido!</h1>
+
+    <h1 id="chinese">欢迎</h1>
+        </div>
+
+    <div class="styled-select">
+        <h1><select ng-model="appLang" ng-options="lang.name for lang in languages" ng-change="newLanguage()">
+            <option value="">Choose your language</option>
+        </select></h1>
+    </div>
+
+
 </div>

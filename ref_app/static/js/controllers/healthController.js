@@ -1,3 +1,0 @@
-function healthController($scope){
-
-}

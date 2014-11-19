@@ -1,10 +1,68 @@
-body {
-    background: url("img/base/hands-nourished-community.jpg") no-repeat center;
+/*body {*/
+/*background: url("img/base/hands-nourished-community.jpg") no-repeat center;*/
+/*-webkit-background-size: cover;*/
+/*-moz-background-size: cover;*/
+/*-o-background-size: cover;*/
+/*background-size: cover;*/
+/*height: 100%;*/
+/*}*/
+.content:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background-image: url('img/base/hands-nourished-community.jpg');
+    background-position: 30%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contentLang:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background: url('img/base/hands-nourished-community.jpg')no-repeat center;
+    background-position: 40%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+
+}
+
+.contentLang {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #language {
@@ -17,35 +75,58 @@ body {
 
 }
 
-#languageBtn {
+#allBtn {
     border: 0 inset #255;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
+    height: 160px;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #eaeaea);
+    background-image: -moz-linear-gradient(top, #f6f6f6, #eaeaea);
+    background-image: -ms-linear-gradient(top, #f6f6f6, #eaeaea);
+    background-image: -o-linear-gradient(top, #f6f6f6, #eaeaea);
+    background-image: linear-gradient(top, #f6f6f6, #eaeaea);
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+#allBtn:active {
+    top: 1px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
+    background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: -moz-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: -ms-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: -o-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: linear-gradient(top, #eaeaea, #f6f6f6);
+}
+
+#allBtn:hover {
+    border: 1px solid #bfc4c4;
+    background-color: #FAFFFF;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FAFFFF), to(#C6C3C3));
+    background-image: -webkit-linear-gradient(top, #FAFFFF, #C6C3C3);
+    background-image: -moz-linear-gradient(top, #FAFFFF, #C6C3C3);
+    background-image: -ms-linear-gradient(top, #FAFFFF, #C6C3C3);
+    background-image: -o-linear-gradient(top, #FAFFFF, #C6C3C3);
+    background-image: linear-gradient(to bottom, #FAFFFF, #C6C3C3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FAFFFF, endColorstr=#C6C3C3);
+}
+
+.btn-default {
+    width: 47%;
+    /*height: 220px;*/
+    margin: 3px;
 
 }
 
-#healthBtn {
-    border: 0 inset #255;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-
-}
-
-#housingBtn {
-    border: 0 inset #255;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-}
-
-#helpBtn {
-    border: 0 inset #255;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-
+#outsideBtns {
+    margin-left: 4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
 .btnText {
@@ -54,6 +135,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: lowercase;
     font-weight: 700;
+    text-align: center;
 }
 
 #help {
@@ -86,14 +168,6 @@ body {
 
 .panel-title {
     font-family: 'Coming Soon', cursive;
-}
-
-.btn-default {
-    width: 40%;
-    /*height: 220px;*/
-    margin-left: 6%;
-    margin-top: 10%;
-    padding: 8px;
 }
 
 i {
@@ -181,6 +255,7 @@ i {
 .container {
     background: #e74c3c;
     min-height: 100%;
+
 }
 
 .strip {
@@ -272,7 +347,7 @@ i {
 }
 
 .l-demo-container {
-    width: 400px;
+    width: auto;
     height: 475px;
     margin: 20px auto 10px auto;
 }
@@ -294,7 +369,7 @@ i {
 
 .example-chat {
 
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Raleway', sans-serif;
     border-radius: 3px;
     -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
@@ -302,25 +377,24 @@ i {
     border: 1px solid #CCC;
     overflow: auto;
     padding: 0px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     color: #666;
 }
 
 .example-chat header {
 
-    background-color: #EEE;
-    background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#DDDDDD));
-    background: -webkit-linear-gradient(top, #EEEEEE, #DDDDDD);
-    background: linear-gradient(top, #EEEEEE, #DDDDDD);
-    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.1);
+       background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
+    background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: -moz-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: -ms-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: -o-linear-gradient(top, #eaeaea, #f6f6f6);
+    background-image: linear-gradient(top, #eaeaea, #f6f6f6);
     border-radius: 3px 3px 0px 0px;
     border-bottom: 1px solid #CCC;
     line-height: 24px;
     font-size: 12px;
     text-align: center;
-    color: #1d9dff;
 }
 
 .example-chat input {
@@ -385,21 +459,21 @@ i {
 }
 
 .example-chat ul .example-chat-username {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .example-chat footer {
-    display: inherit;
+    display: block;
     padding: 10px;
 }
 
 .example-chat footer input {
     border: 1px solid #ced3db;
     height: 40px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: fixed;
+width: 90%;
+bottom: 60px;
+    left: 20px;
     padding: 30px;
     background-color: #efefef;
     text-align: left;
@@ -419,12 +493,12 @@ i {
     color: white;
 }
 
-.btn{
+.btn {
     font-size: 19px;
 }
 
 #healthDiv {
-   padding:  15px 90px 30px;
+    padding: 15px 90px 30px;
 }
 
 #findDoc {
@@ -433,18 +507,80 @@ i {
     background: #1f3451;
     padding: 5px;
 }
+
 #legalRights {
     font-weight: lighter;
     letter-spacing: 1px;
 }
+
 #Chat {
     font-size: 30px;
     text-align: center;
     letter-spacing: 2px;
-    color: #fff;
-font-family: 'Francois One', sans-serif;
+    font-family: 'Francois One', sans-serif;
 }
+
 #click {
     font-size: 20px;
     letter-spacing: 1px;
+}
+.styled-select select {
+   width: 90%;
+   padding: 5px;
+   font-family: 'Permanent Marker', cursive;
+    font-weight: 700;
+   font-size: 23px;
+   line-height: 1;
+
+   border-radius: 90px;
+   height: 50px;
+    position:fixed;
+    color:  darkred;
+    border: 2px solid  #1f3451;
+   left:20px;
+   bottom:70px;
+
+   }
+
+#welcome {
+    font-family: 'Permanent Marker', cursive;
+    padding: 20px;
+    float: right;
+    text-shadow: 2px 2px #18283f;
+}#nepali{
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 2px 2px #18283f;
+}
+#arabic {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 2px 2px #18283f;
+    font-size: 65px;
+    float: right;
+    margin-top: -45px;
+    margin-bottom: 20px;
+}
+#chinese {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 2px 2px #18283f;
+    padding: 20px;
+}
+#french {
+    font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 2px 2px #18283f;
+    padding: 10px;
+}
+#spanish {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    margin-top: 80px;
+    text-shadow: 2px 2px #18283f;
+    text-align: center;
+}
+#armenian {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 2px 2px #18283f;
+    margin-left: 46px;
+     padding: 30px;
+}
+#welcomes {
+    margin-top: 35px;
 }

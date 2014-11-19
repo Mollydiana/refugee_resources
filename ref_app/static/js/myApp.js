@@ -6,7 +6,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         when('/language/', {templateUrl: '/static/js/views/language.html', controller: languageController}).
 //        when('/housing/', {templateUrl: '/static/js/views/housing.html', controller: housingController}).
         when('/help/', {templateUrl: '/static/js/views/help.html', controller: helpController}).
-        when('/health/', {templateUrl: '/static/js/views/health.html', controller: healthController}).
+//        when('/health/', {templateUrl: '/static/js/views/health.html', controller: healthController}).
         when('/modal/', {templateUrl: '/static/js/views/modal.html', controller: function () {
             window.ModalEffects()
         }}).
@@ -20,9 +20,11 @@ app.config(function ($translateProvider) {
         REFUGEE_RESOURCES: 'Refugee Resources',
 
         HEALTH: 'Health',
-        LEARN_ENGLISH: 'Learn English',
+        LEARN_ENGLISH: 'English',
         HOUSING: 'Housing',
         CONNECT: 'Connect',
+        JOBS: 'Jobs',
+        CHAT: 'Chat',
 
         EXIT: 'Close Me!',
         <!--Language Modal Text-->
@@ -44,16 +46,16 @@ app.config(function ($translateProvider) {
         QUESTIONS: 'Questions?',
         CLICK_CIRCLE: '(click the blue circle)',
 
-        BUTTON_TEXT_EN: 'english',
-        BUTTON_TEXT_DE: 'german'
     })
         .translations('sp', {
             REFUGEE_RESOURCES: 'Recursos para Refugiados',
 
             HEALTH: 'Salud',
-            LEARN_ENGLISH: 'Aprende Inglés',
+            LEARN_ENGLISH: 'Inglés',
             HOUSING: 'Vivienda',
             CONNECT: 'Ayuda',
+            JOBS: 'Trabajo',
+            CHAT: 'Charlar',
 
             EXIT: 'Salir',
             <!--Language Modal Text-->
@@ -82,13 +84,15 @@ app.config(function ($translateProvider) {
             LEARN_ENGLISH: 'تعلم اللغة الإنجليزية',
             HOUSING: 'الإسكان',
             CONNECT: 'مساعدة',
+            JOBS: 'وظائف',
+            CHAT: 'بريد',
 
             EXIT: 'خروج',
             <!--Language Modal Text-->
             ONLINE_ENGLISH_PRACTICE: 'على الانترنت الانجليزية الممارسة',
             CALL: 'دعوة',
             TO_SIGN_UP: 'للتسجيل للحصول على الدرجة ESL بالقرب منك!',
-            HERE_IS_A_VIDEO: 'هنا هو شريط فيديو لمساعدتك على بدء ممارسة!',
+            HERE_IS_A_VIDEO: 'فيديو للمساعدة في ممارسة اللغة الإنجليزية',
 
             <!--Health Modal Text-->
             FIND_A_DOCTOR: 'ابحث عن طبيب',
@@ -109,6 +113,8 @@ app.config(function ($translateProvider) {
             LEARN_ENGLISH: 'अंग्रेजी जान्नुहोस्',
             HOUSING: 'आवास',
             CONNECT: 'मदत',
+            JOBS: 'काम',
+            CHAT: 'च्याट',
 
             EXIT: 'निकास',
             <!--Language Modal Text-->
@@ -134,9 +140,11 @@ app.config(function ($translateProvider) {
             REFUGEE_RESOURCES: 'Refugee Resources',
 
             HEALTH: 'Caafimaadka',
-            LEARN_ENGLISH: 'Baro English',
+            LEARN_ENGLISH: 'English',
             HOUSING: 'Guryaha',
             CONNECT: 'Caawin',
+            JOBS: 'Shaqo',
+            CHAT: 'sheekeysto',
 
             EXIT: 'tago',
             <!--Language Modal Text-->
@@ -165,10 +173,12 @@ app.config(function ($translateProvider) {
             LEARN_ENGLISH: 'Սովորեք անգլերեն',
             HOUSING: 'ծածկոց',
             CONNECT: 'միացնել',
+            JOBS: 'Աշխատանք',
+            CHAT: 'զրուցել',
 
             EXIT: 'Ելք',
             <!--Language Modal Text-->
-            ONLINE_ENGLISH_PRACTICE: 'ENGLISH ՊՐԱԿՏԻԿԱՆ',
+            ONLINE_ENGLISH_PRACTICE: 'ENGLISH',
             CALL: 'կոչ',
             TO_SIGN_UP: 'գրանցվել է ESL դասի մոտ ձեզ',
             HERE_IS_A_VIDEO: 'Ահա մի տեսահոլովակ է ստանալ Դուք սկսել',
@@ -188,37 +198,39 @@ app.config(function ($translateProvider) {
 
             BUTTON_TEXT_EN: '',
             BUTTON_TEXT_DE: ''
-        }).translations('ar', {
-    REFUGEE_RESOURCES: 'Refugee Resources',
+        }).translations('fr', {
+            REFUGEE_RESOURCES: 'Refugee Resources',
 
-    HEALTH: '',
-    LEARN_ENGLISH: '',
-    HOUSING: '',
-    CONNECT: '',
+            HEALTH: 'Santé',
+            LEARN_ENGLISH: "L'anglais",
+            HOUSING: 'Logement',
+            CONNECT: 'Aide',
+            JOBS: 'Travail',
+            CHAT: 'Discutter',
 
-    EXIT: '',
-   <!--Language Modal Text-->
-    ONLINE_ENGLISH_PRACTICE: '',
-    CALL: '',
-    TO_SIGN_UP: '',
-    HERE_IS_A_VIDEO: '',
+            EXIT: 'Sortie',
+            <!--Language Modal Text-->
+            ONLINE_ENGLISH_PRACTICE: "Apprendre l'anglais en ligne",
+            CALL: 'Appeler le',
+            TO_SIGN_UP: " pour s'enregister",
+            HERE_IS_A_VIDEO: 'Une vidéo pour démarrer',
 
-    <!--Health Modal Text-->
-    FIND_A_DOCTOR: '',
-    EMERGENCY_NUMBERS: '',
+            <!--Health Modal Text-->
+            FIND_A_DOCTOR: 'Chercher un médecin',
+            EMERGENCY_NUMBERS: "Numéros d'urgence",
 
-    <!--Housing Modal Text-->
-    SEARCH_FOR_HOUSING: '',
-    TENANTS_RIGHTS: '',
-    LEGAL_ASSISTANCE: '',
+            <!--Housing Modal Text-->
+            SEARCH_FOR_HOUSING: 'Chercher un hébergement',
+            TENANTS_RIGHTS: 'Droits des locataires',
+            LEGAL_ASSISTANCE: '(assistance légale)',
 
-    <!--Connect Modal Text-->
-    QUESTIONS: '',
-    CLICK_CIRCLE: '',
+            <!--Connect Modal Text-->
+            QUESTIONS: 'Questions',
+            CLICK_CIRCLE: 'Cliquez le button bleu',
 
-    BUTTON_TEXT_EN: '',
-    BUTTON_TEXT_DE: ''
-  });
+            BUTTON_TEXT_EN: '',
+            BUTTON_TEXT_DE: ''
+        });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useStaticFilesLoader({
         prefix: '/languages/',
