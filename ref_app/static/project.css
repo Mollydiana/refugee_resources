@@ -171,10 +171,10 @@ i {
 
 #title {
     color: #f5f5f5;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 23px;
-    font-family: 'Poiret One', cursive;
-    letter-spacing: 2px;
+    font-family: 'Bevan', cursive;
+    letter-spacing: 1px;
 }
 
 .navbar {
