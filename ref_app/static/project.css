@@ -548,7 +548,7 @@ i {
 
 .styled-select select {
     width: 80%;
-    margin-top: 10px;
+    margin-top: -10px;
     font-family: 'josefin sans';
     font-weight: 700;
     font-size: 23px;
@@ -705,6 +705,10 @@ i {
     margin-left: auto;
     display: block;
     margin-right: auto;
+    -webkit-box-shadow: 0 8px 9px -3px #18283f;
+	   -moz-box-shadow: 0 8px 9px -3px #18283f;
+	        box-shadow: 0 8px 9px -3px #18283f;
+    border-radius: 500px;
 }
 #jobs {
     max-height: 220px;

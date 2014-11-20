@@ -110,11 +110,11 @@ app.config(function ($translateProvider) {
         }).translations('ne', {
             REFUGEE_RESOURCES: 'Refugee Resources',
             HEALTH: 'स्वास्थ्य',
-            LEARN_ENGLISH: 'अंग्रेजी जान्नुहोस्',
+            LEARN_ENGLISH: 'अंग्रेजी',
             HOUSING: 'आवास',
             CONNECT: 'मदत',
             JOBS: 'काम',
-            CHAT: 'Chat',
+            CHAT: 'च्याट',
 
             EXIT: 'निकास',
             <!--Language Modal Text-->
@@ -139,8 +139,8 @@ app.config(function ($translateProvider) {
         }).translations('so', {
             REFUGEE_RESOURCES: 'Refugee Resources',
 
-            HEALTH: 'Caafimaadka',
-            LEARN_ENGLISH: 'Baro English',
+            HEALTH: 'daawo',
+            LEARN_ENGLISH: 'Luqadda',
             HOUSING: 'Guryaha',
             CONNECT: 'Caawin',
             JOBS: 'Shaqo',
@@ -169,11 +169,12 @@ app.config(function ($translateProvider) {
         }).translations('hy', {
             REFUGEE_RESOURCES: 'Refugee Resources',
 
-            HEALTH: 'առողջություն',
-            LEARN_ENGLISH: 'Սովորեք անգլերեն',
+            HEALTH: 'բժիշկ',
+            LEARN_ENGLISH: 'Անգլերեն',
             HOUSING: 'ծածկոց',
             CONNECT: 'միացնել',
-            JOBS: 'Աշխատանք',
+            JOBS: 'գործ',
+            CHAT: 'զրուցել',
 
             EXIT: 'Ելք',
             <!--Language Modal Text-->
