@@ -497,7 +497,6 @@ i {
 }
 
 .btn-special {
-    background-color: #1f3451;
     text-decoration: none;
     color: #ffffff;
     height: 50px;
@@ -507,6 +506,9 @@ i {
     text-decoration: none;
     font-weight: bold;
     color: white;
+        /*background-color: #1f3451;*/
+
+
 }
 
 .btn {
