@@ -9,7 +9,7 @@
             <hr>
             <div class="row"><img src="http://www.ccsf.edu/content/dam/ccsf/ccsf-logo.png"/>
 
-                <div class="col-xs-offset-2">{{ 'CALL' | translate }} <a style="color: #1f3451; font-weight: 700">(415)
+                <div class="col-xs-offset-2">{{ 'CALL' | translate }} <a class="phoneNumber">(415)
                     239-3003</a> {{ 'TO_SIGN_UP' | translate }}
                 </div>
             </div>
@@ -17,12 +17,12 @@
 
 
             <!-- <iframe width="300" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=hospitals%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCetaFCe77sIF6Drh_o79nmc60-24ni45Y"></iframe> -->
-            <strong style="margin-left: 5%">{{ 'HERE_IS_A_VIDEO' | translate }}</strong><br><br>
-            <iframe style="margin-left: 10%" width="190" height="113"
+            <strong class="video">{{ 'HERE_IS_A_VIDEO' | translate }}</strong><br>
+            <iframe id="videoFrame" width="190" height="113"
                     src="//www.youtube.com/embed/zewJ3X_ASF0?list=PLE4LvpwkzPPk-oyClNFRiJXuKUIgnEvSD"
                     frameborder="0" allowfullscreen></iframe>
 
-            <br><br>
+            <br>
             <button class="md-close">{{ 'EXIT' | translate }}</button>
         </div>
     </div>
@@ -40,23 +40,24 @@
         </a>
             <hr>
             <div class="row">
-                <div class="col-xs-offset-5"><strong
-                        style="position: absolute; margin-top: 20px;">{{ 'TENANTS_RIGHTS' | translate }} <p
+                <div class="col-xs-offset-6"><strong
+                        id="tenantsRights">{{ 'TENANTS_RIGHTS' | translate }} <p
                         id="legalRights">{{ 'LEGAL_ASSISTANCE' | translate }}</p></strong></div>
             </div>
-            <a href="http://www.sftu.org/sched.html"><img style="height: 75px; border-radius: 10px "
-                                                          src="http://castrobiscuit.com/wp-content/uploads/2013/01/logo1.jpg"/></a>
+            <div class="col-xs-6"><a href="http://www.sftu.org/sched.html"><img id="legalRights"
+                                                                                src="http://castrobiscuit.com/wp-content/uploads/2013/01/logo1.jpg"/></a>
+            </div>
 
             <div class="row">
-                <div class="col-xs-offset-3"><p><span class="glyphicon glyphicon-phone-alt"></span><a
-                        style="color: #1f3451; font-size: 18px; font-weight: 700; margin-left: 10px;"> (415)
+                <div class="col-xs-offset-3"><p><a
+                        class="phoneNumber" id="unionPhone"><span class="glyphicon glyphicon-phone-alt"></span> (415)
                     282-6622</a></p></div>
             </div>
             <hr>
             <a href="http://www.freeprintshop.org/download/shelter_english.pdf"><img
-                    style="border: 2px solid #1f3451; border-radius:7px; height: 110px; width: 400px"
+                    id="shelterBeds"
                     src="http://4.bp.blogspot.com/-428-xvunLXI/UH12EMrjSvI/AAAAAAAAAWQ/VL5kH1zvAmU/s640/homeless+shelters.jpg"/></a>
-            <br><br>
+            <br>
             <button class="md-close">{{ 'EXIT' | translate }}</button>
         </div>
     </div>
@@ -66,29 +67,32 @@
 
 <div class="md-modal md-effect-1" id="modal-9">
     <div class="md-content">
+
         <h3>{{ 'HEALTH' | translate }}</h3>
 
-        <div id="healthDiv">
-            <h4 style="color: #1f3451; font-weight: bold; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 18px;text-align: center; ">{{ 'FIND_A_DOCTOR' | translate }}</h4>
+        <div>
+            <H4 class="video" id="emergency">{{ 'EMERGENCY_NUMBERS' | translate }}:</h4>
 
-            <a href="http://www.zocdoc.com/"><img id="findDoc"
-                                                  src="http://www.gcmcpa.org/images/bannerFindaDoctor.jpg"/></a><br>
+            <a class="video" href="http://www6.sfgov.org/index.aspx?page=48"><img id="sfGov" class="video"
+                                                                                  ng-src="http://www6.sfgov.org/ftp/Template2/_gfx/theme/logo.png"><span
+                    id="linkToNumbers">http://www6.sfgov.org/</span></a>
+            <hr>
+            <div id="healthDiv">
+                <a href="http://www.zocdoc.com/"><img id="findDoc"
+                                                      src="http://www.tricare.mil/~/media/Images/TRICARE/Buttons/find-a-doctor.png"/></a>
+                <!--<h4 class="video" id="docTitle">{{ 'FIND_A_DOCTOR' | translate }}-->
 
-            <div style="margin-top: 10px; margin-bottom: -30px;"><span class="glyphicon glyphicon-phone-alt">​</span><a
-                    style="color: white; margin-left:9px;font-weight: 700; letter-spacing: 1px"> ​(855) 962-3621</a>
+                <div><a class="video"><span id="docPhone" class="glyphicon glyphicon-phone-alt phoneNumber">​(855)962-3621</span></a>
+                </div>
             </div>
-        </div>
-        <hr>
-        <iframe width="275" height="125" frameborder="0" style=" border-radius:7px; border:0; margin-left: 7%"
-                src="https://www.google.com/maps/embed/v1/search?q=hospitals%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCiFcuoYT_NmwjuJplSUGh1jGdquPiqj3s"></iframe>
-        <br>
-        <hr>
-        <H4 style="padding: 0 15px 0 15px; text-align: center; color: #1f3451; font-size: 18px; font-weight: 700;">{{ 'EMERGENCY_NUMBERS' | translate }}:</h4>
-                <img style="-webkit-filter: invert(100%); margin-left:20%;text-align: center; height: 53px" ng-src="http://www6.sfgov.org/ftp/Template2/_gfx/theme/logo.png">
-        <a href="http://www6.sfgov.org/index.aspx?page=48"><span id="linkToNumbers">http://www6.sfgov.org/</span></a>
+            <hr>
+            <iframe id="map" width="275" height="125" frameborder="0"
+                    src="https://www.google.com/maps/embed/v1/search?q=hospitals%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCiFcuoYT_NmwjuJplSUGh1jGdquPiqj3s"></iframe>
+            <br><br>
 
-        <button class="md-close">{{ 'EXIT' | translate }}</button>
-        <br><br>
+
+            <button class="md-close">{{ 'EXIT' | translate }}</button>
+        </div>
     </div>
 </div>
 
@@ -96,18 +100,18 @@
 
 <div class="md-modal md-effect-12" id="modal-3">
     <div class="md-content">
-        <h3>{{ 'CONNECT' | translate }}</h3>
 
+        <h3>{{ 'CONNECT' | translate }}</h3>
         <div>
             <div id="Chat">{{ 'QUESTIONS' | translate }}<p id="click">{{ 'CLICK_CIRCLE' | translate }}</p></div>
-            <a href="#/help/"><img
+            <a href="#/help/"><img id="bigBlue"
                     src="https://cdn4.iconfinder.com/data/icons/keynote-and-powerpoint-icons/256/Messages-512.png"/></a>
 
-            <br><br>
+            <br>
             <button class="md-close">{{ 'EXIT' | translate }}</button>
+             </div>
         </div>
     </div>
-</div>
 <div class="content">
     <!-- Language Modal -->
     <div style="margin-left:-400px;width: 400%" class="container">

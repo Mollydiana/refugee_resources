@@ -1,5 +1,5 @@
 
-    .content:before {
+.content:before {
     content: "";
     position: fixed;
     left: 0;
@@ -31,9 +31,6 @@
     margin-left: 20px;
     margin-right: 20px;
 }
-
-
-
 
 .contentLang:before {
     content: "";
@@ -363,7 +360,7 @@ i {
     margin: 0;
     padding: 0;
     border: 2px solid #18283f;
-        border-radius: 5px;
+    border-radius: 5px;
 
 }
 
@@ -438,15 +435,14 @@ i {
     padding-left: 105px;
     color: #999;
     font-size: 14px;
-        border-radius: 5px;
-
+    border-radius: 5px;
 
 }
 
 .example-chat .example-chat-toolbar input:active, .example-chat .example-chat-toolbar input:focus {
     color: #999;
     border: 1px solid #FFF;
-        border-radius: 5px;
+    border-radius: 5px;
 
 }
 
@@ -474,7 +470,6 @@ i {
     color: red;
     font-size: 16px;
 }
-
 
 .example-chat footer {
     display: block;
@@ -514,28 +509,29 @@ i {
     font-size: 19px;
 }
 
-#healthDiv {
-    padding: 15px 90px 30px;
-}
+/*#healthDiv {*/
+/*padding: 15px 90px 30px;*/
+/*}*/
 
 #findDoc {
     border-radius: 5px;
-    border: 1px solid darkred;
-    background: #1f3451;
-    height: 40px;
-    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #legalRights {
     font-weight: lighter;
     letter-spacing: 1px;
+    height: auto;
+    border-radius: 7px;
 }
 
 #Chat {
     font-size: 30px;
     text-align: center;
     letter-spacing: 2px;
-    margin: 20px;
+    margin: 8px;
     font-family: 'Francois One', sans-serif;
 }
 
@@ -552,7 +548,6 @@ i {
     font-size: 23px;
     line-height: 4;
 
-
     border-radius: 90px;
     height: 50px;
     position: fixed;
@@ -560,7 +555,7 @@ i {
     border: 1px solid #1f3451;
     left: 35px;
     top: 90px;
-    box-shadow: inset 2px 2px 3px 0  #1f3451;
+    box-shadow: inset 2px 2px 3px 0 #1f3451;
 
 }
 
@@ -619,9 +614,90 @@ i {
     margin-top: -9px;
     position: absolute;
 }
-#linkToNumbers{
+
+#linkToNumbers {
     text-align: center;
     color: #ffffff;
     text-decoration: underline;
     font-size: 14px;
+    vertical-align: middle;
+    align-content: center;
+    margin-top: -40px;
+    display: block;
+    z-index: 1000;
+}
+
+.video {
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    align-content: center;
+}
+
+#videoFrame {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.phoneNumber {
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+
+}
+
+#unionPhone {
+    display: block;
+    margin-top: 60px;
+
+}
+
+#tenantsRights {
+    position: absolute;
+    margin-top: 10px;
+
+}
+
+/* This code doesn't really do that much */
+#shelterBeds {
+    border: 2px solid #1f3451;
+    border-radius: 7px;
+    height: 110px;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+
+#emergency {
+    margin-top: 20px;
+
+}
+
+#sfGov {
+    -webkit-filter: invert(100%);
+    height: 53px
+}
+
+#docPhone {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#map {
+    border-radius: 20px;
+    text-shadow: 2px 2px #18283f;
+    width: 100%;
+
+}
+
+#bigBlue {
+    max-height: 290px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
 }
