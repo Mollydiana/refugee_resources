@@ -104,9 +104,27 @@
         <h3>{{ 'CONNECT' | translate }}</h3>
         <div>
             <div id="Chat">{{ 'QUESTIONS' | translate }}<p id="click">{{ 'CLICK_CIRCLE' | translate }}</p></div>
-            <a href="#/help/"><img id="bigBlue"
+            <a href="#/help/"><img class="bigBlue"
                     src="https://cdn4.iconfinder.com/data/icons/keynote-and-powerpoint-icons/256/Messages-512.png"/></a>
 
+            <br>
+            <button class="md-close">{{ 'EXIT' | translate }}</button>
+             </div>
+        </div>
+    </div>
+
+<!-- jobs Modal -->
+
+<div class="md-modal md-effect-12" id="modal-4">
+    <div class="md-content">
+
+        <h3>{{ 'JOBS' | translate }}</h3>
+        <div>
+            <div class="video"><h4>Career Link Center - Mission</h4>
+<p>3120 Mission Street at Cesar Chavez Street</p><p class="phoneNumber">(415) 401-4800</p>
+                <img class="bigBlue" ng-src="http://www.unitedlabourforce.com.au/images/employment.png"/>
+</div>
+<a class="phoneNumber video" href="http://www.gotresumebuilder.com/">www.gotresumebuilder.com</a>
             <br>
             <button class="md-close">{{ 'EXIT' | translate }}</button>
              </div>
@@ -184,7 +202,7 @@
 
         <button id="allBtn" ng-mouseenter="toggle('help')" ng-mouseleave="toggle('help')"
                 class="btn btn-default md-trigger"
-                data-modal="modal-3">
+                data-modal="modal-4">
             <div class="panel-heading" toggle target="collapseThree">
                 <p class="btnText"><span
                         style="text-align:center; text-transform: capitalize">{{ 'JOBS' | translate }}</span></p>

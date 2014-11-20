@@ -81,7 +81,7 @@ app.config(function ($translateProvider) {
             REFUGEE_RESOURCES: 'Refugee Resources',
 
             HEALTH: 'الصحة',
-            LEARN_ENGLISH: 'تعلم اللغة الإنجليزية',
+            LEARN_ENGLISH: 'الإنجليزية',
             HOUSING: 'الإسكان',
             CONNECT: 'مساعدة',
             JOBS: 'وظائف',
