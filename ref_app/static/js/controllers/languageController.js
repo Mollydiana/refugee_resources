@@ -37,7 +37,7 @@ function languageController($scope, $translate, $location, $log) {
     $scope.newLanguage = function () {
         console.log($scope.appLang);
         $translate.use($scope.appLang.shortKey);
-        $location.path('/');
+        $location.path('/language/');
     };
 
     $scope.status = {
