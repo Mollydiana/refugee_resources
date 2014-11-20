@@ -122,7 +122,7 @@
         <div>
             <div class="video"><h4>Career Link Center - Mission</h4>
 <p>3120 Mission Street at Cesar Chavez Street</p><p class="phoneNumber">(415) 401-4800</p>
-                <img class="bigBlue" ng-src="http://www.unitedlabourforce.com.au/images/employment.png"/>
+                <img id="jobs" ng-src="http://www.unitedlabourforce.com.au/images/employment.png"/>
 </div>
 <a class="phoneNumber video" href="http://www.gotresumebuilder.com/">www.gotresumebuilder.com</a>
             <br>
@@ -131,7 +131,27 @@
         </div>
     </div>
 <div class="content">
-    <!-- Language Modal -->
+
+    <!-- Connect -->
+
+    <div class="md-modal md-effect-12" id="modal-4">
+    <div class="md-content">
+
+        <h3>{{ 'JOBS' | translate }}</h3>
+        <div>
+            <div class="video"><h4>Career Link Center - Mission</h4>
+<p>3120 Mission Street at Cesar Chavez Street</p><p class="phoneNumber">(415) 401-4800</p>
+                <img id="jobs" ng-src="http://www.unitedlabourforce.com.au/images/employment.png"/>
+</div>
+<a class="phoneNumber video" href="http://www.gotresumebuilder.com/">www.gotresumebuilder.com</a>
+            <br>
+            <button class="md-close">{{ 'EXIT' | translate }}</button>
+             </div>
+        </div>
+    </div>
+<div class="content">
+    <!-- fake Modal -->
+
     <div style="margin-left:-400px;width: 400%" class="container">
         <div class="md-modal md-effect-1" id="modal-1">
             <div class="md-content">
@@ -143,6 +163,8 @@
 
         <div class="md-overlay"></div>
     </div>
+
+    <!--start -->
     <div id="outsideBtns">
         <button id="allBtn" ng-mouseenter="toggle('language')" ng-mouseleave="toggle('language')"
                 class="btn btn-default md-trigger" data-modal="modal-12">

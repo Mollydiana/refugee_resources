@@ -172,7 +172,7 @@ i {
 #title {
     color: #f5f5f5;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 23px;
     font-family: 'Poiret One', cursive;
     letter-spacing: 2px;
 }
@@ -216,6 +216,7 @@ i {
 
 .md-show {
     visibility: visible;
+    overflow: auto;
 }
 
 .md-overlay {
@@ -262,11 +263,12 @@ i {
 .md-modal {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 51%;
     width: 50%;
     max-width: 630px;
-    min-width: 320px;
-    height: 74%;
+    min-width: 335px;
+    height: 75%;
+    border-radius: 14px;
     z-index: 2000;
     visibility: hidden;
     backface-visibility: hidden;
@@ -613,7 +615,6 @@ i {
 }
 
 #chatBox {
-    margin-top: -9px;
     position: absolute;
 }
 
@@ -703,7 +704,12 @@ i {
     display: block;
     margin-right: auto;
 }
-
+#jobs {
+    max-height: 220px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+}
 #mesInput {
     position: absolute;
     bottom: 0px;
@@ -714,4 +720,8 @@ i {
     border-right: 2px solid black;
     border-radius: 0 0 6px 6px;
 
+}
+#helpContainer {
+    margin-left: -400px;
+    width: 400%;
 }
