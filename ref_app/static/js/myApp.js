@@ -14,6 +14,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 }]);
 
+// These translation might be better in a separate file than your main app.js
 app.config(function ($translateProvider) {
 
     $translateProvider.translations('en', {
