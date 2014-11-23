@@ -4,6 +4,7 @@ function helpController($scope, $firebase) {
     $scope.username = "guest" + Math.floor(Math.random() * 101);
 
     function updateScroll() {
+        // This may be better suited as a directive or some kind of angular binding instead of using jQuery in your controller
          $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#example-message'));
         $('#example-message').scrollTop($('#example-message')[0].scrollHeight());
     }
