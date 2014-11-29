@@ -9,7 +9,6 @@ def index(request):
 
 # Adding csrf_exempt else Django gives 403 Forbidden and does not hit proxy_to()
 # I hope you check this comment in
-@csrf_exempt
 def proxy_to(request, path, target_url):
     url = '%s%s' % (target_url, path)
     headers = {
