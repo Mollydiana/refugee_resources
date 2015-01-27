@@ -114,8 +114,9 @@
 @media (max-width: 767px) {
     #allBtn {
         border: 0 inset #255;
-        height: 136px;
-        width: 162px;
+        height: 111px;
+        width: 118px;
+        margin-left: 9%;
         border-radius: 20px;
         background-color: #eaeaea;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
