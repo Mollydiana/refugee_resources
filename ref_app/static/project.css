@@ -111,12 +111,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FAFFFF, endColorstr=#C6C3C3);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 458px) {
     #allBtn {
         border: 0 inset #255;
-        height: 111px;
-        width: 118px;
-        margin-left: 9%;
+        height: 100px;
+        max-height: 166px;
+        width: 128px;
+        margin-left: 0%;
         border-radius: 20px;
         background-color: #eaeaea;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
@@ -669,6 +670,47 @@ i {
 
 #chatBox {
     position: absolute;
+}
+
+#englighLogo {
+   max-width: 39%;
+    margin-top: -10px;
+    max-height: 86px;
+
+}
+
+#healthLogo {
+   max-width: 39%;
+    margin-top: -10px;
+    max-height: 86px;
+
+}
+
+#housingLogo {
+    max-width: 39%;
+    margin-top: -10px;
+    max-height: 86px;
+}
+
+#chatLogo {
+    /*max-width: 53%;*/
+    /*margin-top: -28px;*/
+    /*height: 75px;*/
+    max-width: 39%;
+    margin-top: -10px;
+    max-height: 86px;
+}
+
+#jobsLogo {
+    max-width: 39%;
+    margin-top: -10px;
+    max-height: 86px;
+}
+
+#connectLogo {
+    max-width: 39%;
+    margin-top: -10px;
+    max-height: 86px;
 }
 
 #linkToNumbers {
